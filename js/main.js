@@ -18,8 +18,6 @@ function displayData(data) {
     // Create a new table row
     const row = document.createElement("tr");
 
-    row.classList.add("table-success", "table-striped");
-
     // Create table cells for each piece of data
     const dateCell = document.createElement("td");
     dateCell.textContent = expense.added_on;
@@ -39,11 +37,19 @@ function displayData(data) {
     editButton.classList.add("btn", "btn-primary", "edit-button");
     editButton.addEventListener("click", () => editExpense(expense)); //calling from edit.js
 
+    //Putting the edit button inside the table
+    const editButtonCell = document.createElement("td");
+    editButtonCell.appendChild(editButton);
+
     // Create a button to delete the expense
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
     deleteButton.classList.add("btn", "btn-danger", "delete-button");
     deleteButton.addEventListener("click", () => deleteExpense(expense.id)); //calling from delete.js
+
+    //Putting the delete button inside the table
+    const deleteButtonCell = document.createElement("td");
+    deleteButtonCell.appendChild(deleteButton);
 
     //Button for inserting data
     const submitButton = document.querySelector("#submit");
@@ -60,8 +66,8 @@ function displayData(data) {
     row.appendChild(nameCell);
     row.appendChild(amountCell);
     row.appendChild(detailsCell);
-    row.appendChild(editButton);
-    row.appendChild(deleteButton);
+    row.appendChild(editButtonCell);
+    row.appendChild(deleteButtonCell);
 
     // Append the row to the table body
     tableBody.appendChild(row);
@@ -69,7 +75,7 @@ function displayData(data) {
 
   // Append the table to the display element
   let total = document.querySelector("#total");
-  total.innerHTML = `Total = $${calculateTotal(data)}`;
+  total.innerHTML = `Total Expense= $${calculateTotal(data)}`;
 }
 
 function getFormData(event) {

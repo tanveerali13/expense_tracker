@@ -25,14 +25,14 @@
             <h1>Expense Tracker</h1>
         </header>
 
-        <section id="insert" class="py-2 py-md-5">
+        <section id="insert" class="py-sm-3 py-md-5">
 
             <div class="container">
             <form id="insert-form">
 
                 <input type="hidden" name="id" id="id" value="">
 
-                <div mb-3>
+                <div class="mb-3">
                     <label for="date" class="form-label">Select a Date:</label>
                     <input type="date" id="date" class="form-control" name="date" value="<?php echo date('yyyy-mm-dd'); ?>" required>
                 </div>
@@ -61,13 +61,15 @@
 
         <section class="container" id="display">
             <div class="table-responsive">
-                <table id="table" class="table table-success table-striped">
+                <table id="table" class="table table-info table-striped table-md table-hover">
                     <thead>
-                        <tr>
+                        <tr class="table-dark">
                             <th>Date</th>
                             <th>Name</th>
                             <th>Amount</th>
                             <th>Details</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody class="tableBody" id="tableBody"></tbody>
@@ -95,7 +97,7 @@
                 
                     <input type="hidden" name="edit-id" id="edit-id" value="">
 
-                    <div mb-3>
+                    <div class="mb-3">
                         <label for="date" class="form-label">Select a Date:</label>
                         <input type="date" id="edit-date" class="form-control" name="edit-date" value="<?php echo date('yyyy-mm-dd'); ?>" required>
                     </div>

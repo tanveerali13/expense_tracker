@@ -12,7 +12,7 @@ header {
 }
 
 body{
-    background: rgb(190, 249, 246);
+    background: rgb(225, 235, 225);
 }
 .container {
     width: 1200px;
@@ -22,7 +22,8 @@ body{
 
 header h1 {
     font-family: 'PT Sans Caption', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
+    font-style: oblique;
     color: white;
 }
 
@@ -37,14 +38,20 @@ header h1 {
     display: none;
 } */
 
+#date{
+    width: 200px;
+}
 
+input {
+    border: 2px solid #BB4430 !important;
+}
 
 .total-expense {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 30px;
     color: white;
     background-color: #BB4430;
-    width: 200px;
+    width: 350px;
     padding: 0px 10px;
 }
 
