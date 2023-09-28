@@ -2,7 +2,7 @@
 
 $host = "localhost:3306";
 $user = "tanveer_demo_db";
-$pass = "demo@123@";
+$pass = "";
 $db = "tanveer_demo_db";
 
 $link = mysqli_connect($host, $user, $pass, $db);
